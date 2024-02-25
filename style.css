@@ -1,0 +1,56 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    flex-direction: column;
+}
+
+.gallery-wrapper {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    gap: 30px;
+    padding-inline: 30px;
+}
+
+.gallery-item-wrapp {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 0;
+    transition: 0.3s;
+    filter: grayscale(1);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item-wrapp:nth-child(odd) {
+    margin-top: 50px;
+}
+
+.gallery-item {
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    position: absolute;
+}
+
+.gallery-item-wrapp:hover {
+    flex: 2 0 0;
+    filter: grayscale(0);
+}
